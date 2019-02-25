@@ -1,9 +1,11 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+.color-light{
+    background-color: #994d00;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.color-medium{
+    background-color: #663300;
+}
+
+.color-dark{
+    background-color: #331a00;
 }

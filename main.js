@@ -1,8 +1,20 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = "<div class = 'col-12 coffee col-lg-6'   style='font-size:1rem;'>" + "<div class='justify-content-start d-flex flex-row'>"
-    + '<h2>' +  coffee.name + "</h2>" + "<p class='ml-2 my-auto pt-1 text-muted'>" + coffee.roast + '</p>' + "</div>";
+    var html = '<div class = "col-lg-4 col-md-6 col-sm-12">';
+    html += '<div class="card mb-3" style="width: 15rem;">';
+    html += '<div class="card-body">';
+    if(coffee.roast === 'light'){
+        html += '<h5 class="card-title color-light text-white text-center py-2">' +  coffee.name + '</h5>'
+    }else if(coffee.roast === 'medium'){
+        html += '<h5 class="card-title color-medium text-white text-center py-2">' +  coffee.name + '</h5>'
+    }else{
+        html += '<h5 class="card-title color-dark text-white text-center py-2">' +  coffee.name + '</h5>'
+    }
+    html += '<h6 class="card-subtitle mb-2 text-muted">' + coffee.roast + '</h6>';
+    html += '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>';
+    html +=  '</div>';
+    html += '</div>';
     html += '</div>';
 
     return html;

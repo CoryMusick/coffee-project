@@ -16,17 +16,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <div class="row" id="coffees">
-            </div>
-        </div>
 
 
 
-        <div class="col-6">
+        <div class="col-4">
             <form>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1" class="font-weight-bold">Roast</label>
+                    <label for="roast-selection" class="font-weight-bold">Roast</label>
                     <select class="form-control" id="roast-selection">
                         <option>all</option>
                         <option>light</option>
@@ -35,7 +31,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="Coffee Search" class="font-weight-bold">Coffee Name</label>
+                    <label for="search" class="font-weight-bold">Coffee Name</label>
                     <input class="form-control"  type="search" aria-label="Search" id="search">
                 </div>
                 <button id='submit' class="btn btn-primary btn-block mt-2 " type="button">Submit</button>
@@ -54,12 +50,23 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="Coffee Search" class="font-weight-bold">Name</label>
+                    <label for="add" class="font-weight-bold">Name</label>
                     <input id="add" class="add form-control" type="search" aria-label="Search">
                 </div>
                 <button id="addButton" class="add btn btn-primary btn-block mt-2 " type="button">Submit</button>
             </form>
         </div>
+
+        <div class="col-8">
+            <div class="row" id="coffees">
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
 </div>
 

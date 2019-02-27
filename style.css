@@ -9,3 +9,7 @@
 .color-dark{
     background-color: #331a00;
 }
+
+.card:hover{
+    box-shadow : black;
+}

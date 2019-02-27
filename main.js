@@ -1,5 +1,6 @@
 "use strict";
 
+
 function renderCoffee(coffee) {
     var html = '<div class = "col-lg-4 col-md-6 col-sm-12">';
     html += '<div class="card mb-3" style="width: 15rem;">';
@@ -47,22 +48,13 @@ function searchBar(e) {
     var searchedCoffee = [];
 
     coffees.forEach(function (coffee) {
-        if (coffee.name.toUpperCase().indexOf(input) === 0){
+        if (coffee.name.toUpperCase().indexOf(input) === 0 || coffee.name.toUpperCase().includes(input.toUpperCase())){
             searchedCoffee.push(coffee)
         }
     });
     tbody.innerHTML = renderCoffees(searchedCoffee);
 }
 
-function addStuff(e) {
-    var newRoast =  roastAdd.value;
-    var newName = add.value;
-    var newCoffee = {id: (coffees.length + 1), name: newName, roast: newRoast};
-
-
-
-    coffees.push(newCoffee);
-}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -100,6 +92,5 @@ submitButton.addEventListener('click', updateCoffees);
 
 search.addEventListener('keyup', searchBar);
 
-addButton.addEventListener('click', addStuff);
-addButton.addEventListener('click', updateCoffees);
 
+addButton.addEventListener('click', updateCoffees);
